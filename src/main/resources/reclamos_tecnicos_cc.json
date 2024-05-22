@@ -1,0 +1,41 @@
+[
+
+    {
+      "idTicket": "1-207161810",
+      "codCliente": "262540",
+      "idServicio": "1-2WQP9K",
+      "contrato": "G-30820",
+      "direccionInstalacion": "Calle C. Guerrilleros Lanza  Nro. 117 - Z. MIraflores",
+      "ciudad": "La Paz",
+      "fechaApertura": "27/03/2024 22:39:36",
+      "fechaCierre": "30/03/2024 20:50:09",
+      "email": "agile.bolivia.net@gmail.com",
+      "emailAlternativo": "alternativo1@gmail.com",
+      "telCelular": "74313397",
+      "ciudadServicio": "LA PAZ",
+      "creadoPor": "ACONDORI",
+      "fechaSolucion": "27/03/2024 22:42:05",
+      "area": "1. RECLAMOS",
+      "subArea": "1.2. TECNICOS INTERNET & TX Datos",
+      "sintoma": "1.2.19. No navega"
+    },
+    {
+      "idTicket": "1-207261318",
+      "codCliente": "236536",
+      "idServicio": "1-2N62NT",
+      "contrato": "GC-13024",
+      "direccionInstalacion": "Av. M Torrico Entre Av America Y Buenos Aires  S/N Piso 12 12D - Edif.Altos Casah - Zona Queru Queru",
+      "ciudad": "Cochabamba",
+      "fechaApertura": "30/03/2024 19:39:31",
+      "fechaCierre": "30/03/2024 19:51:39",
+      "email": "agile.bolivia.bo@gmail.com",
+      "emailAlternativo": "alternativo@gmail.com",
+      "telCelular": "77937523",
+      "ciudadServicio": "COCHABAMBA",
+      "creadoPor": "GSOSA",
+      "fechaSolucion": "30/03/2024 19:44:45",
+      "area": "1. RECLAMOS",
+      "subArea": "1.2. TECNICOS INTERNET & TX Datos",
+      "sintoma": "1.2.3. Lentitud del Servicio"
+    }
+]

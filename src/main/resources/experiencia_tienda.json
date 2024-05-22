@@ -1,0 +1,45 @@
+[
+    {
+      "idTicket": "1-207184479",
+      "codCliente": "262922",
+      "idServicio": "1-2WWT4Q",
+      "contrato": "GC-16718",
+      "idContacto": "2-Bw4a",
+      "area": "2. SOLICITUDES",
+      "subArea": "2.3. INTERNET & OTROS",
+      "sintoma": "2.3.50. Otras Internet",
+      "creadoPor": "APACELLO",
+      "areaCreador": "FRONT DESK - COCHABAMBA",
+      "fechaApertura": "28/03/2024 11:52:37",
+      "fechaSolucion": null,
+      "fechaCierre": "28/03/2024 12:04:45",
+      "ciudad": "Cochabamba",
+      "ciudadServicio": "COCHABAMBA",
+      "sucursal": "Sucursal Torre 42",
+      "email": "agile.bolivia.net@gmail.com",
+      "emailAlternativo": null,
+      "telCelular": "78377717"
+    },
+    {
+      "idTicket": "1-207122954",
+      "codCliente": "108315",
+      "idServicio": "1-2LR5HF",
+      "contrato": "GC-12475",
+      "idContacto": "1-8TPKP",
+      "area": "2. SOLICITUDES",
+      "subArea": "2.3. INTERNET & OTROS",
+      "sintoma": "2.3.2. Baja",
+      "creadoPor": "APACELLO",
+      "areaCreador": "FRONT DESK - COCHABAMBA",
+      "fechaApertura": "27/03/2024 11:46:20",
+      "fechaSolucion": null,
+      "fechaCierre": "28/03/2024 08:58:18",
+      "ciudad": "Cochabamba",
+      "ciudadServicio": "COCHABAMBA",
+      "sucursal": "Sucursal Torre 42",
+      "email": "agile.bolivia.bo@gmail.com",
+      "emailAlternativo": null,
+      "telCelular": "72722622"
+    }
+    
+  ]

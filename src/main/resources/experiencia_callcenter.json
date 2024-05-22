@@ -1,0 +1,40 @@
+[
+    {
+      "idTicket": "1-207220648",
+      "codCliente": "282625",
+      "idServicio": "1-3A0VFC",
+      "contrato": "G-40151",
+      "idContacto": "1-3A0VEY",
+      "area": "3. CONSULTAS",
+      "subArea": "3.1. GENERALES",
+      "sintoma": "3.1.7. Informacion General",
+      "creadoPor": "ACONDORI",
+      "areaCreador": "CALL CENTER",
+      "fechaApertura": "30/03/2024 21:18:09",
+      "fechaSolucion": "30/03/2024 21:21:00",
+      "fechaCierre": "30/03/2024 21:21:37",
+      "ciudadServicio": "LA PAZ",
+      "email": "agile.bolivia.net@gmail.com",
+      "emailAlternativo": "otraalternativa@gmail.com",
+      "telCelular": "79639509"
+    },
+    {
+      "idTicket": "1-207226307",
+      "codCliente": "260203",
+      "idServicio": "1-2VV76X",
+      "contrato": "V-34879",
+      "idContacto": "2-BnkF",
+      "area": "3. CONSULTAS",
+      "subArea": "3.1. GENERALES",
+      "sintoma": "3.1.7. Informacion General",
+      "creadoPor": "ACONDORI",
+      "areaCreador": "CALL CENTER",
+      "fechaApertura": "30/03/2024 21:12:47",
+      "fechaSolucion": "30/03/2024 21:13:00",
+      "fechaCierre": "30/03/2024 21:13:51",
+      "ciudadServicio": "LA PAZ",
+      "email": "agile.bolivia.bo@gmail.com",
+      "emailAlternativo": "alternativa@gmail.com",
+      "telCelular": "70692383"
+    }
+]

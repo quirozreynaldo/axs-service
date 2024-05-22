@@ -1,0 +1,40 @@
+[
+    {
+        "idTicket": "1-206974891",
+        "codCliente": "245674",
+        "idServicio": "1-2P8VUN",
+        "contrato": "V-33014",
+        "direccionInstalacion": "Calle Las Retamas  No 516 Piso 1 Dpto 1-A - Edif.Villa Laura - Zona Los Pinos - entre calles 27-A y",
+        "ciudad": "La Paz",
+        "fechaApertura": "25/03/2024 20:53:53",
+        "fechaCierre": "25/03/2024 21:15:29",
+        "email": "agile.bolivia.net@gmail.com",
+        "emailAlternativo": "algo",
+        "telCelular": "72267441",
+        "ciudadServicio": "LA PAZ",
+        "creadoPor": "RHUAYGUA",
+        "fechaSolucion": null,
+        "area": "1. RECLAMOS",
+        "subArea": "1.2. TECNICOS INTERNET & TX Datos",
+        "sintoma": "1.2.19. No navega"
+    },
+    {
+        "idTicket": "1-206921723",
+        "codCliente": "137362",
+        "idServicio": "1-399463",
+        "contrato": "GS-17709",
+        "direccionInstalacion": "Av. Barrientos  Nro SN Dpto 7S - Edif.Condominio Itaiti - Zona Urbari esquina avenida Ipiaguaiqui",
+        "ciudad": "Santa Cruz",
+        "fechaApertura": "21/03/2024 22:42:42",
+        "fechaCierre": "25/03/2024 20:58:18",
+        "email": "agile.bolivia.bo@gmail.com",
+        "emailAlternativo": null,
+        "telCelular": "71523404",
+        "ciudadServicio": "SANTA CRUZ",
+        "creadoPor": "PYUJRA",
+        "fechaSolucion": "25/03/2024 09:06:41",
+        "area": "1. RECLAMOS",
+        "subArea": "1.2. TECNICOS INTERNET & TX Datos",
+        "sintoma": "1.2.19. No navega"
+    }
+]

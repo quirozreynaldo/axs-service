@@ -1,0 +1,19 @@
+[
+	{
+	  "contrato": "G-44864",
+	  "fechaInicio": "2024-03-29 00:00:00",
+	  "periodoInstalacion": "2024-04-18 00:00:00",
+	  "idServicio": "1-3FKCVO",
+	  "ciudad": "La Paz",
+	  "instancia": "FIBRA",
+	  "idVendedor": "algunIdVendedor",
+	  "vendedor": "Mercado Yepez Jorge Luis",
+	  "ciudadVendedor": "La Paz",
+	  "canalVendedor": "Front Digital",
+	  "contactoEmail": "agile.bolivia.bo@gmail.com",
+	  "emailAlternativoContacto": "emailaternativo@gmail.com",
+	  "tecnicoInstalacion": "alguntecnico de instacion",
+	  "telefonoCelular": "70710241",
+	  "ciudadServicio": "LA PAZ"
+	}
+  ]

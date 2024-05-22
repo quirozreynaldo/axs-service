@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration charset="UTF-16">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601} [%-p] %notEmpty{[%marker]} [%c{1}]:[%L]- %m%n"/>
+        </Console>
+
+        <RollingFile name="Error_File" fileName="./logs/axs-service-err.log" filePattern="./logs/axs-error-%d{-dd-MMMM-yyyy}- %i.log4j2.log.gz">
+            <Policies>
+                 <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <PatternLayout pattern="%d{ISO8601} [%-p] %notEmpty{[%marker]} [%c{1}]:[%L]- %m%n"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+        </RollingFile>
+
+        <RollingFile name="File" fileName="./logs/axs-service.log" filePattern="./logs/axs-service-%d{-dd-MMMM-yyyy}- %i.log4j2.log.gz">
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <PatternLayout charset="ISO-8859-1" pattern="%d{ISO8601} [%-p] %notEmpty{[%marker]} [%c{1}]:[%L]- %m%n"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="Error_File"/>
+        </Root>
+    </Loggers>
+</Configuration>

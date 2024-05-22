@@ -1,0 +1,64 @@
+[
+	{
+		"idServicio": "1-2MP60Y",
+		"ciudad": "Santa Cruz",
+		"instancia": "FIBRA",
+		"idVendedor": "1-1YUQ51",
+		"vendedor": "Fernandez Rojas Freddy Nelson",
+		"ciudadVendedor": "Santa Cruz",
+		"canalVendedor": "Pymes",
+		"fechaInicio": "2021-04-28T04:00:00.000+00:00",
+		"contactoEmail": "agile.bolivia.bo@gmail.com",
+		"emailAlternativoContacto": null,
+		"telefonoCelular": null,
+		"contrato": "G-34333",
+		"ciudadServicio": "LA PAZ"
+	},
+	{
+		"idServicio": "1-2MOVWW",
+		"ciudad": "Cochabamba",
+		"instancia": "FIBRA",
+		"idVendedor": "1-2BDBB5",
+		"vendedor": "Saavedra Cadima Alexis",
+		"ciudadVendedor": "Cochabamba",
+		"canalVendedor": "Pymes",
+		"fechaInicio": "2021-04-28T04:00:00.000+00:00",
+		"contactoEmail": "agile.bolivia.net@gmail.com",
+		"emailAlternativoContacto": null,
+		"telefonoCelular": "70341066",
+		"contrato": "G-33333",
+		"ciudadServicio": "COCHABAMBA"
+	}
+    ,
+	{
+		"idServicio": "1-2MOVWQ",
+		"ciudad": "Cochabamba",
+		"instancia": "FIBRA",
+		"idVendedor": "1-2BDBC7",
+		"vendedor": "Juan Pereiz",
+		"ciudadVendedor": "Cochabamba",
+		"canalVendedor": "Pymes",
+		"fechaInicio": "2021-04-28T04:00:00.000+00:00",
+		"contactoEmail": "quirozreynaldoandroid@gmail.com",
+		"emailAlternativoContacto": null,
+		"telefonoCelular": null,
+		"contrato": "G-33397",
+		"ciudadServicio": "COCHABAMBA"
+	}
+    ,
+	{
+		"idServicio": "1-2MOVWS",
+		"ciudad": "Cochabamba",
+		"instancia": "FIBRA",
+		"idVendedor": "1-2BDBZ8",
+		"vendedor": "Perico Perez",
+		"ciudadVendedor": "Cochabamba",
+		"canalVendedor": "Pymes",
+		"fechaInicio": "2021-04-28T04:00:00.000+00:00",
+		"contactoEmail": "quirozreynaldo@gmail.com",
+		"emailAlternativoContacto": null,
+		"telefonoCelular": null,
+		"contrato": "G-33398",
+		"ciudadServicio": "COCHABAMBA"
+	}
+]
