@@ -77,6 +77,20 @@ public class IntegrationService {
         List<Contact> contactsList = new ArrayList<>();
         for (Ticket ticket : reclamosComerciales) {
             if(ticket.getEmail() != null || ticket.getEmailAlternativo()!= null ){
+                String dataConcat =
+                "*Area: " + (ticket.getArea()!=null?ticket.getArea():"NA") + " " +
+                "*Ciudad: " + (ticket.getCiudad()!=null?ticket.getCiudad():"NA") + " " +
+                "*Sintoma: " + (ticket.getSintoma()!=null?ticket.getSintoma():"NA") + " " +
+                "*SubArea: " + (ticket.getSubArea()!=null?ticket.getSubArea():"NA") + " " +
+                "*Creado Por: " + (ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA") + " " +
+                "*Id Servicio: " +(ticket.getIdServicio()!=null?ticket.getIdServicio():"NA")  + " " +
+                "*Fecha Cierre: " + (ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA") + " " +
+                "*Area Creación: " + (ticket.getAreaCreacion()!=null?ticket.getAreaCreacion():"NA") + " " +
+                "*Fecha Apertura: " +(ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA")  + " " +
+                "*Fecha Solución: " + (ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA") + " " +
+                "*Dirección Instalación: " + (ticket.getDireccionInstalacion()!=null?ticket.getDireccionInstalacion():"NA") + " " +
+                "*Email Alternativo: " + (ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
+                log.info("dataConcat:*********************************** "+dataConcat);
                 Contact contact = new Contact();
                 contact.setEmail(ticket.getEmail() != null ? ticket.getEmail() : ticket.getEmailAlternativo());
                 contact.setFirstName(ticket.getEmailOriginal()!=null?ticket.getEmailOriginal():"NA");
@@ -86,22 +100,8 @@ public class IntegrationService {
                 customFields.setField2(ticket.getIdTicket()!=null?ticket.getIdTicket():"NA");
                 customFields.setField3(ticket.getContrato()!=null?ticket.getContrato():"NA");
                 customFields.setField4(ticket.getCodCliente()!=null?ticket.getCodCliente():"NA");
-                customFields.setField5(ticket.getArea()!=null?ticket.getArea():"NA");
-                customFields.setField6(ticket.getCiudad()!=null?ticket.getCiudad():"NA");
-                customFields.setField7(ticket.getSintoma()!=null?ticket.getSintoma():"NA");
-                customFields.setField8(ticket.getSubArea()!=null?ticket.getSubArea():"NA");
-                customFields.setField9(ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA");
-                customFields.setField10(ticket.getIdServicio()!=null?ticket.getIdServicio():"NA");
-                customFields.setField11(ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA");
-                customFields.setField12(ticket.getAreaCreacion()!=null?ticket.getAreaCreacion():"NA");
-                customFields.setField13(ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA");
-                customFields.setField14(ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA");
-                customFields.setField15(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
-                customFields.setField16(ticket.getDireccionInstalacion()!=null?ticket.getDireccionInstalacion():"NA");
-                customFields.setField17(ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
-                customFields.setField18("NA");
-                customFields.setField19("NA");
-                customFields.setField20("NA");
+                customFields.setField5(dataConcat);
+                customFields.setField6(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
                 contact.setCustomFields(customFields);
                 contactsList.add(contact);
         }
@@ -178,6 +178,20 @@ public class IntegrationService {
         List<Contact> contactsList = new ArrayList<>();
         for (TicketServicoCliente ticket : servicoAlClientePresencial) {
             if(ticket.getEmail() != null || ticket.getEmailAlternativo()!= null ){
+                String dataConcat =
+				    "*Id Contacto: " +(ticket.getIdContacto()!=null?ticket.getIdContacto():"NA")  + " " +
+					"*Area: " +(ticket.getArea()!=null?ticket.getArea():"NA")  + " " +
+					"*Sub Area: " + (ticket.getSubArea()!=null?ticket.getSubArea():"NA") + " " +
+					"*Síntoma: " + (ticket.getSintoma()!=null?ticket.getSintoma():"NA") + " " +
+					"*Creado Por: " +(ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA")  + " " +
+					"*Area Creador: " + (ticket.getAreaCreador()!=null?ticket.getAreaCreador():"NA") + " " +
+					"*Fecha Apertura: " + (ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA") + " " +
+					"*Fecha Solución: " +(ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA")  + " " +
+					"*Fecha Cierre: " + (ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA") + " " +
+					"*Ciudad: " + (ticket.getCiudad()!=null?ticket.getCiudad():"NA") + " " +
+					"*Sucursal: " + (ticket.getSucursal()!=null?ticket.getSucursal():"NA") + " " +
+					"*Email Alternativo: " + (ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA") + " " +
+                    "*Teléfono Celular: " + (ticket.getTelCelular()!=null?ticket.getTelCelular():"NA");
                 Contact contact = new Contact();
                 contact.setEmail(ticket.getEmail() != null ? ticket.getEmail() : ticket.getEmailAlternativo());
                 contact.setFirstName(ticket.getEmailOriginal()!=null?ticket.getEmailOriginal():"NA");
@@ -187,22 +201,8 @@ public class IntegrationService {
                 customFields.setField2(ticket.getCodCliente()!=null?ticket.getCodCliente():"NA");
                 customFields.setField3(ticket.getIdServicio()!=null?ticket.getIdServicio():"NA");
                 customFields.setField4(ticket.getContrato()!=null?ticket.getContrato():"NA");
-                customFields.setField5(ticket.getIdContacto()!=null?ticket.getIdContacto():"NA");
-                customFields.setField6(ticket.getArea()!=null?ticket.getArea():"NA");
-                customFields.setField7(ticket.getSubArea()!=null?ticket.getSubArea():"NA");
-                customFields.setField8(ticket.getSintoma()!=null?ticket.getSintoma():"NA");
-                customFields.setField9(ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA");
-                customFields.setField10(ticket.getAreaCreador()!=null?ticket.getAreaCreador():"NA");
-                customFields.setField11(ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA");
-                customFields.setField12(ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA");
-                customFields.setField13(ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA");
-                customFields.setField14(ticket.getCiudad()!=null?ticket.getCiudad():"NA");
-                customFields.setField15(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
-                customFields.setField16(ticket.getSucursal()!=null?ticket.getSucursal():"NA");
-                customFields.setField17(ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
-                customFields.setField18(ticket.getTelCelular()!=null?ticket.getTelCelular():"NA");
-                customFields.setField19("NA");
-                customFields.setField20("NA");
+                customFields.setField5(dataConcat);
+                customFields.setField6(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
                 contact.setCustomFields(customFields);
                 contactsList.add(contact);
             }
@@ -278,6 +278,18 @@ public class IntegrationService {
         List<Contact> contactsList = new ArrayList<>();
         for (Ticket ticket : reclamosTecnicos) {
             if(ticket.getEmail() != null || ticket.getEmailAlternativo()!= null ){
+                String dataConcat =
+				    "*Area: " +(ticket.getArea()!=null?ticket.getArea():"NA")  + " " +
+					"*Ciudad: " + (ticket.getCiudad()!=null?ticket.getCiudad():"NA") + " " +
+					"*Síntoma: " + (ticket.getSintoma()!=null?ticket.getSintoma():"NA") + " " +
+					"*Sub Area: " + (ticket.getSubArea()!=null?ticket.getSubArea():"NA") + " " +
+					"*Creado Por: " + (ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA") + " " +
+					"*Id Servicio: " + (ticket.getIdServicio()!=null?ticket.getIdServicio():"NA") + " " +
+					"*Fecha Cierre: " + (ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA") + " " +
+					"*Fecha Apertura: " + (ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA") + " " +
+					"*Fecha Solución: " + (ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA") + " " +
+					"*Dirección Instalación	: " + (ticket.getDireccionInstalacion()!=null?ticket.getDireccionInstalacion():"NA") + " " +
+	                "*Email Alternativo: " + (ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
                 Contact contact = new Contact();
                 contact.setEmail(ticket.getEmail() != null ? ticket.getEmail() : ticket.getEmailAlternativo());
                 contact.setFirstName(ticket.getEmailOriginal()!=null?ticket.getEmailOriginal():"NA");
@@ -287,22 +299,8 @@ public class IntegrationService {
                 customFields.setField2(ticket.getIdTicket()!=null?ticket.getIdTicket():"NA");
                 customFields.setField3(ticket.getContrato()!=null?ticket.getContrato():"NA");
                 customFields.setField4(ticket.getCodCliente()!=null?ticket.getCodCliente():"NA");
-                customFields.setField5(ticket.getArea()!=null?ticket.getArea():"NA");
-                customFields.setField6(ticket.getCiudad()!=null?ticket.getCiudad():"NA");
-                customFields.setField7(ticket.getSintoma()!=null?ticket.getSintoma():"NA");
-                customFields.setField8(ticket.getSubArea()!=null?ticket.getSubArea():"NA");
-                customFields.setField9(ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA");
-                customFields.setField10(ticket.getIdServicio()!=null?ticket.getIdServicio():"NA");
-                customFields.setField11(ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA");
-                customFields.setField12(ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA");
-                customFields.setField13(ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA");
-                customFields.setField14(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
-                customFields.setField15(ticket.getDireccionInstalacion()!=null?ticket.getDireccionInstalacion():"NA");
-                customFields.setField16(ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
-                customFields.setField17("NA");
-                customFields.setField18("NA");
-                customFields.setField19("NA");
-                customFields.setField20("NA");
+                customFields.setField5(dataConcat);
+                customFields.setField6(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
                 contact.setCustomFields(customFields);
                 contactsList.add(contact);
             }
@@ -380,6 +378,18 @@ public class IntegrationService {
         List<Contact> contactsList = new ArrayList<>();
         for (Ticket ticket : reclamosTecnicos) {
             if(ticket.getEmail() != null || ticket.getEmailAlternativo()!= null ){
+                String dataConcat =
+                "*Area: " +(ticket.getArea()!=null?ticket.getArea():"NA")  + " " +
+                "*Ciudad: " + (ticket.getCiudad()!=null?ticket.getCiudad():"NA") + " " +
+                "*Síntoma: " + (ticket.getSintoma()!=null?ticket.getSintoma():"NA") + " " +
+                "*Sub Area: " + (ticket.getSubArea()!=null?ticket.getSubArea():"NA") + " " +
+                "*Creado Por: " + (ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA") + " " +
+                "*Id Servicio: " + (ticket.getIdServicio()!=null?ticket.getIdServicio():"NA") + " " +
+                "*Fecha Cierre: " + (ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA") + " " +
+                "*Fecha Apertura: " + (ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA") + " " +
+                "*Fecha Solución: " + (ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA") + " " +
+                "*Dirección Instalación	: " + (ticket.getDireccionInstalacion()!=null?ticket.getDireccionInstalacion():"NA") + " " +
+                "*Email Alternativo: " + (ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
                 Contact contact = new Contact();
                 contact.setEmail(ticket.getEmail() != null ? ticket.getEmail() : ticket.getEmailAlternativo());
                 contact.setFirstName(ticket.getEmailOriginal()!=null?ticket.getEmailOriginal():"NA");
@@ -389,22 +399,8 @@ public class IntegrationService {
                 customFields.setField2(ticket.getIdTicket()!=null?ticket.getIdTicket():"NA");
                 customFields.setField3(ticket.getContrato()!=null?ticket.getContrato():"NA");
                 customFields.setField4(ticket.getCodCliente()!=null?ticket.getCodCliente():"NA");
-                customFields.setField5(ticket.getArea()!=null?ticket.getArea():"NA");
-                customFields.setField6(ticket.getCiudad()!=null?ticket.getCiudad():"NA");
-                customFields.setField7(ticket.getSintoma()!=null?ticket.getSintoma():"NA");
-                customFields.setField8(ticket.getSubArea()!=null?ticket.getSubArea():"NA");
-                customFields.setField9(ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA");
-                customFields.setField10(ticket.getIdServicio()!=null?ticket.getIdServicio():"NA");
-                customFields.setField11(ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA");
-                customFields.setField12(ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA");
-                customFields.setField13(ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA");
-                customFields.setField14(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
-                customFields.setField15(ticket.getDireccionInstalacion()!=null?ticket.getDireccionInstalacion():"NA");
-                customFields.setField16(ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
-                customFields.setField17("NA");
-                customFields.setField18("NA");
-                customFields.setField19("NA");
-                customFields.setField20("NA");
+                customFields.setField5(dataConcat);
+                customFields.setField6(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
                 contact.setCustomFields(customFields);
                 contactsList.add(contact);
             }
@@ -479,6 +475,19 @@ public class IntegrationService {
         List<Contact> contactsList = new ArrayList<>();
         for (TicketServicoCliente ticket : servicoAlClientePresencial) {
             if(ticket.getEmail() != null || ticket.getEmailAlternativo()!= null ){
+                String dataConcat =
+                "*Id Contacto: " +(ticket.getIdContacto()!=null?ticket.getIdContacto():"NA") + " " +
+                "*Area: " +(ticket.getArea()!=null?ticket.getArea():"NA")  + " " +
+                "*Sub Area: " + (ticket.getSubArea()!=null?ticket.getSubArea():"NA") + " " +
+                "*Síntoma: " + (ticket.getSintoma()!=null?ticket.getSintoma():"NA") + " " +
+                "*Creado Por: " + (ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA") + " " +
+                "*Area Creador: " + (ticket.getAreaCreador()!=null?ticket.getAreaCreador():"NA") + " " +
+                "*Fecha Apertura: " + (ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA") + " " +
+                "*Fecha Solución: " + (ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA") + " " +
+                "*Fecha Cierre: " + (ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA") + " " +
+                "*Email Alternativo : " + (ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA") + " " +
+                "*Teléfono Celular : " + (ticket.getTelCelular()!=null?ticket.getTelCelular():"NA");
+
             Contact contact = new Contact();
                 contact.setEmail(ticket.getEmail() != null ? ticket.getEmail() : ticket.getEmailAlternativo());
                 contact.setFirstName(ticket.getEmailOriginal()!=null?ticket.getEmailOriginal():"NA");
@@ -488,22 +497,8 @@ public class IntegrationService {
                 customFields.setField2(ticket.getCodCliente()!=null?ticket.getCodCliente():"NA");
                 customFields.setField3(ticket.getIdServicio()!=null?ticket.getIdServicio():"NA");
                 customFields.setField4(ticket.getContrato()!=null?ticket.getContrato():"NA");
-                customFields.setField5(ticket.getIdContacto()!=null?ticket.getIdContacto():"NA");
-                customFields.setField6(ticket.getArea()!=null?ticket.getArea():"NA");
-                customFields.setField7(ticket.getSubArea()!=null?ticket.getSubArea():"NA");
-                customFields.setField8(ticket.getSintoma()!=null?ticket.getSintoma():"NA");
-                customFields.setField9(ticket.getCreadoPor()!=null?ticket.getCreadoPor():"NA");
-                customFields.setField10(ticket.getAreaCreador()!=null?ticket.getAreaCreador():"NA");
-                customFields.setField11(ticket.getFechaApertura()!=null?ticket.getFechaApertura():"NA");
-                customFields.setField12(ticket.getFechaSolucion()!=null?ticket.getFechaSolucion():"NA");
-                customFields.setField13(ticket.getFechaCierre()!=null?ticket.getFechaCierre():"NA");
-                customFields.setField14(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
-                customFields.setField15(ticket.getEmailAlternativo()!=null?ticket.getEmailAlternativo():"NA");
-                customFields.setField16(ticket.getTelCelular()!=null?ticket.getTelCelular():"NA");
-                customFields.setField17("NA");
-                customFields.setField18("NA");
-                customFields.setField19("NA");
-                customFields.setField20("NA");
+                customFields.setField5(dataConcat);
+                customFields.setField6(ticket.getCiudadServicio()!=null?ticket.getCiudadServicio():"NA");
                 contact.setCustomFields(customFields);
                 contactsList.add(contact);
             }
@@ -592,6 +587,7 @@ public class IntegrationService {
                 customFields.setField4(contrato.getPeriodoInstalacion()!=null?contrato.getPeriodoInstalacion():"NA");
                 customFields.setField5(contrato.getVendedor()!=null?contrato.getVendedor():"NA");
                 customFields.setField6(contrato.getCiudadVendedor()!=null?contrato.getCiudadVendedor():"NA");
+
                 customFields.setField7(contrato.getCanalVendedor()!=null?contrato.getCanalVendedor():"NA");
                 customFields.setField8(contrato.getFechaInicio()!=null?contrato.getFechaInicio():"NA");
                 customFields.setField9(contrato.getEmailAlternativoContacto()!=null?contrato.getEmailAlternativoContacto():"NA");
@@ -693,6 +689,7 @@ public class IntegrationService {
                 customFields.setField4(contrato.getPeriodoInstalacion()!=null?contrato.getPeriodoInstalacion():"NA");
                 customFields.setField5(contrato.getVendedor()!=null?contrato.getVendedor():"NA");
                 customFields.setField6(contrato.getCiudadVendedor()!=null?contrato.getCiudadVendedor():"NA");
+
                 customFields.setField7(contrato.getCanalVendedor()!=null?contrato.getCanalVendedor():"NA");
                 customFields.setField8(contrato.getFechaInicio()!=null?contrato.getFechaInicio():"NA");
                 customFields.setField9(contrato.getEmailAlternativoContacto()!=null?contrato.getEmailAlternativoContacto():"NA");
@@ -783,6 +780,16 @@ public class IntegrationService {
         List<Contact> contactsList = new ArrayList<>();
         for (Contrato contrato : instalacion) {
             if(contrato.getContactoEmail() != null || contrato.getEmailAlternativoContacto()!= null ){
+                String dataConcat = "*Vendedor: " + (contrato.getVendedor() != null ? contrato.getVendedor() : "NA") + " " +
+                    "*Ciudad Vendedor: " + (contrato.getCiudadVendedor() != null ? contrato.getCiudadVendedor() : "NA") + " " +
+                    "*Canal Vendedor: " + (contrato.getCanalVendedor() != null ? contrato.getCanalVendedor() : "NA") + " " +
+                    "*Fecha Inicio: " + (contrato.getFechaInicio() != null ? contrato.getFechaInicio() : "NA") + " " +
+                    "*Email Alternativo: " + (contrato.getEmailAlternativoContacto() != null ? contrato.getEmailAlternativoContacto() : "NA") + " " +
+                    "*Teléfono Celular: " + (contrato.getTelefonoCelular() != null ? contrato.getTelefonoCelular() : "NA") + " " +
+                    "*Contrato: " + (contrato.getContrato() != null ? contrato.getContrato() : "NA") + " " +
+                    "*Ciudad Vendedor: " + (contrato.getCiudadVendedor() != null ? contrato.getCiudadVendedor() : "NA") + " " +
+                    "*Técnico Instalación: " + (contrato.getTecnicoInstalacion() != null ? contrato.getTecnicoInstalacion() : "NA");
+                    log.info("dataConcat:*********************************** "+dataConcat);
                 Contact contact = new Contact();
                 contact.setEmail(contrato.getContactoEmail() != null ? contrato.getContactoEmail() : contrato.getEmailAlternativoContacto());
                 contact.setFirstName(contrato.getEmailOriginal()!=null?contrato.getEmailOriginal():"NA");
@@ -792,22 +799,8 @@ public class IntegrationService {
                 customFields.setField2(contrato.getCiudad()!=null?contrato.getCiudad():"NA");
                 customFields.setField3(contrato.getInstancia()!=null?contrato.getInstancia():"NA");
                 customFields.setField4(contrato.getPeriodoInstalacion()!=null?contrato.getPeriodoInstalacion():"NA");
-                customFields.setField5(contrato.getVendedor()!=null?contrato.getVendedor():"NA");
-                customFields.setField6(contrato.getCiudadVendedor()!=null?contrato.getCiudadVendedor():"NA");
-                customFields.setField7(contrato.getCanalVendedor()!=null?contrato.getCanalVendedor():"NA");
-                customFields.setField8(contrato.getFechaInicio()!=null?contrato.getFechaInicio():"NA");
-                customFields.setField9(contrato.getEmailAlternativoContacto()!=null?contrato.getEmailAlternativoContacto():"NA");
-                customFields.setField10(contrato.getTelefonoCelular()!=null?contrato.getTelefonoCelular():"NA");
-                customFields.setField11(contrato.getContrato()!=null?contrato.getContrato():"NA");
-                customFields.setField12(contrato.getCiudadServicio()!=null?contrato.getCiudadServicio():"NA");
-                customFields.setField13(contrato.getTecnicoInstalacion()!=null?contrato.getTecnicoInstalacion():"NA");
-                customFields.setField14("NA");
-                customFields.setField15("NA");
-                customFields.setField16("NA");
-                customFields.setField17("NA");
-                customFields.setField18("NA");
-                customFields.setField19("NA");
-                customFields.setField20("NA");
+                customFields.setField5(dataConcat);
+                customFields.setField6(contrato.getCiudadServicio()!=null?contrato.getCiudadServicio():"NA");
                 contact.setCustomFields(customFields);
                 contactsList.add(contact);
             }
