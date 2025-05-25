@@ -1,12 +1,10 @@
 package com.keysolbo.axsservice.database;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-
 import com.keysolbo.axsservice.Util.ConstantDb;
 import com.keysolbo.axsservice.Util.Utils;
 import com.keysolbo.axsservice.model.db.ContactHistory;
@@ -14,7 +12,6 @@ import com.keysolbo.axsservice.model.db.ContactLog;
 import com.keysolbo.axsservice.model.db.InstallationLog;
 import com.keysolbo.axsservice.model.db.ServiceComplainLog;
 import com.keysolbo.axsservice.model.db.WebhookLog;
-import com.keysolbo.axsservice.model.survey.Contact;
 import com.keysolbo.axsservice.model.survey.Recipient;
 import com.keysolbo.axsservice.model.survey.RecipientResponse;
 
@@ -61,7 +58,7 @@ public class ManageLog {
             serviceComplain.getIdTicket(),serviceComplain.getCodCliente(),serviceComplain.getIdServicio(),
             serviceComplain.getIdContacto(),serviceComplain.getArea(),serviceComplain.getSubArea(),serviceComplain.getSintoma(),
             serviceComplain.getCreadoPor(),serviceComplain.getAreaCreador(),serviceComplain.getFechaCierre(),serviceComplain.getEmail(),
-            serviceComplain.getEmailAlternativo(),serviceComplain.getTelCelular(),serviceComplain.getCiudadServicio(),
+            serviceComplain.getEmailAlternativo(),Utils.cleanString(serviceComplain.getTelCelular()),serviceComplain.getCiudadServicio(),
             serviceComplain.getContrato(),serviceComplain.getFechaApertura(),serviceComplain.getFechaSolucion(),
             serviceComplain.getCiudad(),serviceComplain.getSucursal(),serviceComplain.getDireccionInstalacion(),
             serviceComplain.getAreaCreacion(),serviceComplain.getServiceComplain(),serviceComplain.getStatus(),serviceComplain.getSendStatus());
@@ -80,7 +77,7 @@ public class ManageLog {
             jdbcTemplate.update(insert, installationLog.getContrato(),installationLog.getFechaInicio(),installationLog.getPeriodoInstalacion(),
             installationLog.getIdServicio(),installationLog.getCiudad(),installationLog.getInstancia(),installationLog.getVendedor(),
             installationLog.getCiudadVendedor(),installationLog.getCanalVendedor(),installationLog.getContactoEmail(),
-            installationLog.getEmailAlternativoContacto(),installationLog.getTecnicoInstalacion(),installationLog.getTelefonoCelular(),
+            installationLog.getEmailAlternativoContacto(),installationLog.getTecnicoInstalacion(),Utils.cleanString(installationLog.getTelefonoCelular()),
             installationLog.getCiudadServicio(),installationLog.getServiceComplain(),installationLog.getStatus(),installationLog.getSendStatus(),installationLog.getIdVendedor());
         } catch (Exception ex){
             log.error("recordInstallationLog log exception", ex);

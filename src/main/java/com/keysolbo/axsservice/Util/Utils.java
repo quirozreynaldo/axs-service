@@ -245,4 +245,13 @@ public class Utils {
         }
         return result;
     }
+
+    public static String cleanString(String input) {
+        if (input == null) {
+            return null;
+        }
+        // Elimina saltos de línea: \r, \n, \r\n
+        String resultado = input.replaceAll("\\r?\\n", "");
+        return resultado;
+    }
 }
